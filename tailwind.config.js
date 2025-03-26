@@ -1,4 +1,4 @@
-import forms from '@tailwindcss/forms';
+
 
 export default {
     // tailwind.config.js
@@ -10,7 +10,7 @@ export default {
       // ...
     },
     plugins: [
-      forms,
+      require('@tailwindcss/forms'),
       // ...
     ],
 }
