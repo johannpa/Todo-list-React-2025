@@ -10,6 +10,8 @@ function App() {
     { id: nanoid(8), content: "item 3" },
   ]);
 
+  const [todo, setTodo] = useState('');
+
   function deleteTodo(id) {
     setTodoList(todoList.filter((item) => item.id !== id));
   }
@@ -20,7 +22,9 @@ function App() {
         <h1 className="text-3xl txt-slate-100 mb-4">La To-do liste</h1>
         <form action="" className="mb-10">
           <label htmlFor="todo-item" className="text-slate-50">Ajouter une chose à faire</label>
-          <input 
+          <input
+            value={todo}
+            onChange={(e) => setTodo(e.target.value)}
             type="text" 
             className="mt-1 block w-full rounded" 
             name="" 
