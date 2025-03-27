@@ -29,7 +29,7 @@ function App() {
           <button className="mt-4 py-2 px-2 bg-slate-50 rounded min-w-[115px]">Ajouter</button>
         </form>
         <ul>
-          
+          {todoList.length === 0 && <li className='text-slate-50 text-md'>Pas d'items à afficher...</li>} 
           {todoList.map((item) => (
             <ListItem key={item.id} itemData={item} deleteTodo={deleteTodo}/>
           ))}
