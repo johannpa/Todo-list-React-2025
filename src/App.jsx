@@ -30,10 +30,9 @@ function App() {
         </form>
         <ul>
           {todoList.length === 0 && <li className='text-slate-50 text-md'>Pas d'items à afficher...</li>} 
-          {todoList.map((item) => (
+          {todoList.length > 0 && todoList.map((item) => (
             <ListItem key={item.id} itemData={item} deleteTodo={deleteTodo}/>
           ))}
-
         </ul>
       </div>
     </div>
